@@ -1,0 +1,141 @@
+/*
+	Michael Bowen
+	CS1520 - Mon/Wed 4:30pm Recitation Tue 5:00pm
+	
+	Custom CSS styles for the project
+*/
+
+body {
+	background-color: #f0eceb;
+}
+
+form#splash_form {
+	margin: 100px auto;
+	background-color: #aa863a;
+	height: 200px;
+	width: 300px;	
+	border: 1px solid black;
+}
+
+label#splash_label {
+	position: absolute;
+	margin: 20px;
+	display: block;
+	padding: 10px;
+	width: 260px;
+	height: 40px;
+	text-align: center;
+	background-color: #f0eceb;
+}
+
+div#splash_lbl {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 300px;
+}
+
+div#splash_btn {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	height: 100px;
+	width: 300px;
+	text-align: center;
+}
+
+input.splash-button {
+	display: inline-block;
+	text-align: center;
+	margin: 20px;
+	border: 0 none;
+	background: #f0eceb;
+	height: 40px;
+	width: 100px;
+}
+
+.blog-nav-item#splash_nav {
+	visibility: hidden;
+}
+
+table, td, th {
+	border: solid thin black;
+}
+
+th, td {
+	text-align: center;
+	padding: 4px;
+}
+
+.form-row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input.rad_btn {
+	display: inline-block;
+	text-align: right;
+	margin-left: 5px;
+	margin-right: 40px;
+}
+
+input.contact-button {
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: 20px;
+	color: #f0eceb;
+	border: 0 none;
+	background: #aa863a;
+	height: 40px;
+	width: 200px;
+}
+
+.contact-buffer {
+	margin-bottom: 370px;
+}
+
+.blog-sidebar {
+	margin-top: -125px;
+	position: fixed;
+	display: inline-block;
+}
+
+.blog-img {
+	margin-bottom: 10px;
+}
+
+.blog-masthead {
+	background-color: #aa863a;
+}
+
+.blog-nav .active {
+	color: #f0eceb;
+}
+
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+	color: #f0eceb;
+}
+
+.blog-nav-item {
+	color: #283018;
+}
+
+.sidebar-module-inset {
+	background-color: #729f98;
+	color: #f0eceb;
+}
+
+.sidebar-module-inset > h4 {
+	color: #f0eceb;
+}
+
+.blog-description {
+	color: #729f98;
+}
+
+.blog-footer {
+	color: #729f98;
+	background-color: #283018;
+}
