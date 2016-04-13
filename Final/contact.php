@@ -85,8 +85,7 @@
 							<h2 class="blog-post-title">Leave me a message</h2>
 							<?php display_form(); ?>
 						</div> <!-- ends blog post div -->
-					</div> <!-- ends blog-main -->
-			
+					</div> <!-- ends blog-main -->			
 			<?php
 		}
 		
@@ -114,17 +113,14 @@
 			</div>
 			<div class="form-row">
 				<label for="return">May I contact you via email?</label><br />
-						Yes <input class="rad_btn" type="radio" name="return" value="1" checked>
-						No <input class="rad_btn" type="radio" name="return" value="0">
+					Yes <input class="rad_btn" type="radio" name="return" value="1" checked>
+					No <input class="rad_btn" type="radio" name="return" value="0">
 			</div>
 			<div class="form-row">
 					<input class="contact-button" type="submit" name="submit" value="Submit Message">
 					<input class="contact-button" type="reset" name="clear" value="Clear">
-			</div>
-				
-		</form>
-		
-		
+			</div>				
+		</form>		
 		<?php		
 	}
 

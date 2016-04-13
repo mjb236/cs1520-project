@@ -22,17 +22,16 @@
 		
 		//display the Breweries section of the document
 		?>
-		<div class="container">
-			<div class="blog-header">
-				<h1 class="blog-title">Breweries and Beer</h1>
-				<p class="lead blog-description">Below you will find data on breweries that I have visited and beers from those breweries.</p>
-			</div>
-			
-			<div class="row">
-				<div class="col-sm-9 blog-main">
-					<div class="blog-post">
-						<h2 class="blog-post-title" id="brewery-info">Breweries</h2>
-						
+			<div class="container">
+				<div class="blog-header">
+					<h1 class="blog-title">Breweries and Beer</h1>
+					<p class="lead blog-description">Below you will find data on breweries that I have visited and beers from those breweries.</p>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-9 blog-main">
+						<div class="blog-post">
+							<h2 class="blog-post-title" id="brewery-info">Breweries</h2>						
 		<?php
 		
 		//connect to the database for querying information
@@ -47,8 +46,8 @@
 		
 		//breweries query
 		$select = "SELECT Name, Address1 as Address, City, State, Zip, Phone, Established as Est, Website
-								FROM Breweries
-								ORDER BY Name";
+							FROM Breweries
+							ORDER BY Name";
 		$result = $db->query($select);
 		$rows = $result->num_rows;
 		if($rows > 0) {
@@ -91,16 +90,16 @@
 		
 		//close the brewery section of the document and open beer section
 		?>
-						</div> <!-- ends the Breweries section -->
-						<div class="blog-post">
-							<h2 class="blog-post-title" id="beers-info">Beers</h2>
+			</div> <!-- ends the Breweries section -->
+			<div class="blog-post">
+				<h2 class="blog-post-title" id="beers-info">Beers</h2>
 		<?php
 		
 		//beers query
 		$select = "SELECT breweries.Name as Brewery, beer.Name, Style, IBU, Plato, ABV, Hops, Notes
-								FROM beer, breweries
-								WHERE beer.BreweryID = breweries.ID
-								ORDER BY breweries.Name, beer.Name";
+							FROM beer, breweries
+							WHERE beer.BreweryID = breweries.ID
+							ORDER BY breweries.Name, beer.Name";
 		$result = $db->query($select);
 		$rows = $result->num_rows;
 		if($rows > 0) {
@@ -132,8 +131,8 @@
 		
 		//end the beer section and the blog section
 		?>
-						</div> <!-- ends the Beer section -->
-					</div> <!-- ends the blog-main section -->
+				</div> <!-- ends the Beer section -->
+			</div> <!-- ends the blog-main section -->
 		<?php
 		
 		//close the database and display the other sections of the document
@@ -169,7 +168,6 @@
 				</div> <!-- ends the sidebar -->
 			</div> <!-- ends the row division -->
 		</div> <!-- ends the container division -->			
-		
 		<?php
 	}
 ?>

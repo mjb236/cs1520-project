@@ -97,7 +97,6 @@
 				</div> <!-- ends the sidebar -->
 			</div> <!-- ends the row division -->
 		</div> <!-- ends the container division -->			
-		
 		<?php
 	}
 ?>
