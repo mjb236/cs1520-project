@@ -23,28 +23,29 @@
 		exit();
 	}
 ?>
-	<!-- display the navigation bar for consistency -->
-	<!-- do so manually here since I want the bar displayed with no visible information -->
-	<body>
-		<div class="blog-masthead">
-			<div class="container">
-				<nav class="blog-nav">
-					<a class="blog-nav-item" id="splash_nav" href="#">Home</a>
-				</nav>
-			</div>
-		</div>
-		
-		<!-- display the form for age verification -->
+
+<!-- display the navigation bar for consistency -->
+<!-- do so manually here since I want the bar displayed with no visible information -->
+<body>
+	<div class="blog-masthead">
 		<div class="container">
-			<form id="splash_form" action="splash.php" method="POST">
-				<div id="splash_lbl">
-					<label id="splash_label">Are you at least 21 years of age?</label>
-				</div>
-				<div id="splash_btn">
-					<input class="splash-button" type="submit" name="ofAge" value="Yes">
-					<input class="splash-button" type="submit" name="notOfAge" value="No">
-				</div>
-			</form>
+			<nav class="blog-nav">
+				<a class="blog-nav-item" id="splash_nav" href="#">Home</a>
+			</nav>
 		</div>
-	</body>
-	</html>
+	</div>
+	
+	<!-- display the form for age verification -->
+	<div class="container">
+		<form id="splash_form" action="splash.php" method="POST">
+			<div id="splash_lbl">
+				<label id="splash_label">Are you at least 21 years of age?</label>
+			</div>
+			<div id="splash_btn">
+				<input class="splash-button" type="submit" name="ofAge" value="Yes">
+				<input class="splash-button" type="submit" name="notOfAge" value="No">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
