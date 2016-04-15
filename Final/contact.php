@@ -3,10 +3,13 @@
 	//CS1520 - Mon/Wed 4:30pm Recitation Tue 5:00pm
 	//
 	//Contact page for the project site.
+
+	//start session - used for verifying whether the user has verified age or not
+	session_start();
 	
-	include("files/header.php");
-	include("files/footer.php");
-	include("files/navbar.php");
+	//declare an array with the links for the nav bar
+	$navItems = ["Home" => "home.php", "Breweries & Beer" => "beer.php", "About" => "about.php",  
+							"Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name
 	$_SESSION["initPage"] = "contact.php";
@@ -18,6 +21,9 @@
 	}
 	else {
 		//user has verified age - display content
+		include("files/header.php");
+		include("files/footer.php");
+		include("files/navbar.php");
 		display_navbar($navItems, $active);
 		
 		if(isset($_POST["name"])) {
