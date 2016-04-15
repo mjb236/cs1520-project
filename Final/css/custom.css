@@ -97,7 +97,7 @@ input.contact-button {
 
 .blog-sidebar {
 	margin-top: -125px;
-	position: fixed;
+	position: relative;
 	display: inline-block;
 }
 

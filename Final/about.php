@@ -39,6 +39,7 @@
 					<div class="blog-post">
 						<img src="img/mike.jpg" alt="A picture of Mike.">
 					</div>
+
 		<?php
 		
 		//open the file containing information to posted in the about page.
