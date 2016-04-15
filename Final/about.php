@@ -4,9 +4,12 @@
 	//
 	//About page for the project site.
 	
-	include("files/header.php");
-	include("files/footer.php");
-	include("files/navbar.php");
+	//start session - used for verifying whether the user has verified age or not
+	session_start();
+	
+	//declare an array with the links for the nav bar
+	$navItems = ["Home" => "home.php", "Breweries & Beer" => "beer.php", "About" => "about.php",  
+							"Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name
 	$_SESSION["initPage"] = "about.php";
@@ -18,6 +21,9 @@
 	}
 	else {
 		//user has verified age - display content
+		include("files/header.php");
+		include("files/footer.php");
+		include("files/navbar.php");
 		display_navbar($navItems, $active);
 		
 		//page setup

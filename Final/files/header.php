@@ -1,17 +1,10 @@
-<?php
+<!--
 	//Michael Bowen
 	//CS1520 - Mon/Wed 4:30pm Recitation Tue 5:00pm
 	//
 	//Header file for project site
 	//Sets up the html document for each of the site pages
-	
-	//start session - used for verifying whether the user has verified age or not
-	session_start();
-	
-	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Breweries & Beer" => "beer.php", "About" => "about.php",  
-							"Contact" => "contact.php"];
-?>
+-->
 
 <!DOCTYPE html>
 <html lang="en">

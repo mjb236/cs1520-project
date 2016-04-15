@@ -4,8 +4,13 @@
 	//
 	//Displays a splash page asking user to verify age
 	//Also sets the $_SESSION["ofAge"] variable appropriately
+
+	//start session - used for verifying whether the user has verified age or not
+	session_start();
 	
-	include("files/header.php");
+	//declare an array with the links for the nav bar
+	$navItems = ["Home" => "home.php", "Breweries & Beer" => "beer.php", "About" => "about.php",  
+							"Contact" => "contact.php"];
 	
 	if(isset($_POST["ofAge"])) {
 		$_SESSION["ofAge"] = TRUE;
@@ -22,6 +27,8 @@
 		session_destroy();
 		exit();
 	}
+
+	include("files/header.php");
 ?>
 
 <!-- display the navigation bar for consistency -->
