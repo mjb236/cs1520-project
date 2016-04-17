@@ -57,88 +57,34 @@
 		$result = $db->query($select);
 		$rows = $result->num_rows;
 		if($rows > 0) {
-			//database returned results as expected. Output in table format.
+			//database returned results as expected.
 			$cols = mysqli_num_fields($result);
-			echo "<table>\n<tr>\n";
 			
-			//print table headers
-			for($i = 0; $i < $cols; $i++) {
-				$column = mysqli_fetch_field($result);
-				echo "<th>$column->name</th>\n";
-			}
-			echo "</tr>\n";
-			
-			//print table data
+			//print brewery data
+			$currRow = 1;
 			while($row = mysqli_fetch_row($result)) {
-				echo "<tr>\n";
-				
-				foreach($row as $data) {
-					if(is_string($data)) {
-						//if data is string, check for http - if found format as a link.
-						if(strpos($data, "http") !== FALSE) {
-							echo "<td><a href=\"$data\">Link to site</a></td>\n";
-						}
-						else {
-							echo "<td>$data</td>\n";
-						}
-					}
-					else {
-						echo "<td>$data</td>\n";
-					}					
-				}
-				echo "</tr>\n";
+				echo "<br />";
+				echo "<div class=\"brewery\" id=\"brewery$currRow\">";
+				echo "<h3>$row[0]</h3>";
+				echo "<h5 id=\"street-address$currRow\">$row[1]</h5>";
+				echo "<h5 id=\"city-address$currRow\">$row[2], $row[3] $row[4]</h5>";
+				echo "<h5>$row[5]</h5>";
+				echo "<h5>Esablished $row[6]</h5>";
+				echo "<h5><a href=\"$row[7]\">Website</a></h5>";
+				echo "</div>";
+				$currRow++;
 			}
-			echo "</table>";
+
 		}
 		else {
 			echo "No data found.";
 		}
 		
-		//close the brewery section of the document and open beer section
+		//close the brewery section of the document
 		?>
-			</div> <!-- ends the Breweries section -->
-			<div class="blog-post">
-				<h2 class="blog-post-title" id="beers-info">Beers</h2>
-		<?php
-		
-		//beers query
-		$select = "SELECT breweries.Name as Brewery, beer.Name, Style, IBU, Plato, ABV, Hops, Notes
-							FROM beer, breweries
-							WHERE beer.BreweryID = breweries.ID
-							ORDER BY breweries.Name, beer.Name";
-		$result = $db->query($select);
-		$rows = $result->num_rows;
-		if($rows > 0) {
-			//database returned results as expected. Output in table format.
-			$cols = mysqli_num_fields($result);
-			echo "<table>\n<tr>\n";
-			
-			//print table headers
-			for($i = 0; $i < $cols; $i++) {
-				$column = mysqli_fetch_field($result);
-				echo "<th>$column->name</th>\n";
-			}
-			echo "</tr>\n";
-			
-			//print table data
-			while($row = mysqli_fetch_row($result)) {
-				echo "<tr>\n";
-				
-				foreach($row as $data) {
-					echo "<td>$data</td>\n";
-				}
-				echo "</tr>\n";
-			}
-			echo "</table>";
-		}
-		else {
-			echo "No data found.";
-		}
-		
-		//end the beer section and the blog section
-		?>
-				</div> <!-- ends the Beer section -->
+				</div> <!-- ends the Breweries section -->
 			</div> <!-- ends the blog-main section -->
+
 		<?php
 		
 		//close the database and display the other sections of the document
