@@ -14,14 +14,11 @@
 						FROM Breweries";
 	$result = $db->query($select);
 	$rows = $result->num_rows;
-	$array = array();
 	if($rows > 0) {
 		while($row = mysqli_fetch_row($result)) {
-			//echo json_encode($row);
-			array_push($array, $row);
+			echo json_encode($row);
 		}
 	}
-	$db->close();
 
-	echo json_encode($array);
+	$db->close();
 ?>
