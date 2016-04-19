@@ -208,3 +208,9 @@ input.contact-button {
 .brewery-item:hover {
 	background-color: #CCC;
 }
+
+#map {
+	width: 500px;
+	height: 400px;
+	border: thin solid black;
+}
