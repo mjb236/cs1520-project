@@ -37,8 +37,66 @@
 				<div class="row">
 					<div class="col-sm-9 blog-main">
 						<div class="blog-post">
-							<h2 class="blog-post-title" id="brewery-info">Breweries</h2>						
+							<h2 class="blog-post-title" id="brewery-info">Breweries</h2>
+								<form	id="pred-search">
+									<input class="pred-search-input" type="search" placeholder="Search for a brewery.">
+										<ul class="results">
+										</ul>
+									<input class="pred-search-submit" type="submit" value="Search">
+								</form>
+
 		<?php
+			if(isset($_GET["breweryName"])) {
+				echo "<div class=\"brewery\" id=\"brewery0\">";
+				echo "<h3>" . $_GET["breweryName"] . "</h3>";
+				echo "<h5>Brewery does not exist in database.</h5>";
+				echo "</div>";
+			}
+			else if(isset($_GET["brewery"])) {
+				//connect to the database for querying information
+				$server = "localhost";
+				$user = "bowen";
+				$pw = "bowen1234";
+				$dbname = "project";
+				$db = new mysqli($server, $user, $pw, $dbname);
+				if($db->connect_error) {
+					die("Database connection error: " . $db->connect_error);
+				}		
+
+				//query the db for the submitted brewery
+				$select = "SELECT Name, Address1 as Address, City, State, Zip, Phone, Established as Est, Website, ID
+									FROM Breweries
+									WHERE ID = " . $_GET["brewery"];
+				$result = $db->query($select);
+				$rows = $result->num_rows;
+				if($rows > 0) {
+					//database returned results as expected.
+					//print brewery data
+					$currRow = 1;
+					while($row = mysqli_fetch_row($result)) {
+						echo "<br />";
+						echo "<div class=\"brewery\" id=\"brewery$currRow\">";
+						echo "<h3>$row[0]</h3>";
+						echo "<h5 id=\"street-address$currRow\">$row[1]</h5>";
+						echo "<h5 id=\"city-address$currRow\">$row[2], $row[3] $row[4]</h5>";
+						echo "<h5>$row[5]</h5>";
+						echo "<h5>Esablished $row[6]</h5>";
+						echo "<h5><a href=\"$row[7]\">Website</a></h5>";
+						echo "</div>";
+						$currRow++;
+					}
+
+				}
+				else {
+					echo "No data found.";
+				}
+			}
+			else {
+				echo ("not set.");
+			}
+
+		?>
+<!-- 		<?php
 		
 		//connect to the database for querying information
 		$server = "localhost";
@@ -49,7 +107,7 @@
 		if($db->connect_error) {
 			die("Database connection error: " . $db->connect_error);
 		}		
-		
+
 		//breweries query
 		$select = "SELECT Name, Address1 as Address, City, State, Zip, Phone, Established as Est, Website
 							FROM Breweries
@@ -57,94 +115,46 @@
 		$result = $db->query($select);
 		$rows = $result->num_rows;
 		if($rows > 0) {
-			//database returned results as expected. Output in table format.
-			$cols = mysqli_num_fields($result);
-			echo "<table>\n<tr>\n";
-			
-			//print table headers
-			for($i = 0; $i < $cols; $i++) {
-				$column = mysqli_fetch_field($result);
-				echo "<th>$column->name</th>\n";
-			}
-			echo "</tr>\n";
-			
-			//print table data
+			//database returned results as expected.
+			//print brewery data
+			$currRow = 1;
 			while($row = mysqli_fetch_row($result)) {
-				echo "<tr>\n";
-				
-				foreach($row as $data) {
-					if(is_string($data)) {
-						//if data is string, check for http - if found format as a link.
-						if(strpos($data, "http") !== FALSE) {
-							echo "<td><a href=\"$data\">Link to site</a></td>\n";
-						}
-						else {
-							echo "<td>$data</td>\n";
-						}
-					}
-					else {
-						echo "<td>$data</td>\n";
-					}					
-				}
-				echo "</tr>\n";
+				echo "<br />";
+				echo "<div class=\"brewery\" id=\"brewery$currRow\">";
+				echo "<h3>$row[0]</h3>";
+				echo "<h5 id=\"street-address$currRow\">$row[1]</h5>";
+				echo "<h5 id=\"city-address$currRow\">$row[2], $row[3] $row[4]</h5>";
+				echo "<h5>$row[5]</h5>";
+				echo "<h5>Esablished $row[6]</h5>";
+				echo "<h5><a href=\"$row[7]\">Website</a></h5>";
+				echo "</div>";
+				$currRow++;
 			}
-			echo "</table>";
+
 		}
 		else {
 			echo "No data found.";
 		}
 		
-		//close the brewery section of the document and open beer section
-		?>
-			</div> <!-- ends the Breweries section -->
-			<div class="blog-post">
-				<h2 class="blog-post-title" id="beers-info">Beers</h2>
-		<?php
-		
-		//beers query
-		$select = "SELECT breweries.Name as Brewery, beer.Name, Style, IBU, Plato, ABV, Hops, Notes
-							FROM beer, breweries
-							WHERE beer.BreweryID = breweries.ID
-							ORDER BY breweries.Name, beer.Name";
-		$result = $db->query($select);
-		$rows = $result->num_rows;
-		if($rows > 0) {
-			//database returned results as expected. Output in table format.
-			$cols = mysqli_num_fields($result);
-			echo "<table>\n<tr>\n";
-			
-			//print table headers
-			for($i = 0; $i < $cols; $i++) {
-				$column = mysqli_fetch_field($result);
-				echo "<th>$column->name</th>\n";
-			}
-			echo "</tr>\n";
-			
-			//print table data
-			while($row = mysqli_fetch_row($result)) {
-				echo "<tr>\n";
-				
-				foreach($row as $data) {
-					echo "<td>$data</td>\n";
-				}
-				echo "</tr>\n";
-			}
-			echo "</table>";
-		}
-		else {
-			echo "No data found.";
-		}
-		
-		//end the beer section and the blog section
-		?>
-				</div> <!-- ends the Beer section -->
+		//close the brewery section of the document
+		?> -->
+				</div> <!-- ends the Breweries section -->
 			</div> <!-- ends the blog-main section -->
+
 		<?php
 		
 		//close the database and display the other sections of the document
 		$db->close();		
 		display_sidebar();		
 		display_footer();
+		?>
+		<script src="js/brewerySearch.js"></script>
+
+		<!-- close body and html tags -->	
+		</body>
+		</html>
+
+		<?php
 	}
 
 	function display_sidebar() {

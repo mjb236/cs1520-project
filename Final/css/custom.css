@@ -139,3 +139,72 @@ input.contact-button {
 	color: #729f98;
 	background-color: #283018;
 }
+
+.pred-search-submit {
+	width: 100px;
+	position: absolute;
+	height: 35;
+	right: 0;
+	top: 50px;
+	display: block;
+}
+
+.results {
+	-webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;		
+	box-sizing: content-box;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	list-style-type: none;
+	font-size: 20px;
+	width: 84%;
+	border-color: #333;
+	border-top: none;
+	border-width: 2px;
+	border-style: solid;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+}
+
+.pred-search-input {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 35px;
+  width: 85%;
+  padding: 0 46px 0 10px;
+  border-color: #888;
+  border-style: solid;
+  border-width: 2px;
+  color: #333;
+  font-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.brewery-item {
+	width: 100%;
+	display: block;
+	height: 35px;
+	position: relative;
+	top: 0;
+	padding-left: 10px;
+}
+
+.brew-search-item {
+	display: block;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+.brew-search-item:hover {
+	text-decoration: none;
+}
+
+.brewery-item:hover {
+	background-color: #CCC;
+}

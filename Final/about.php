@@ -63,6 +63,13 @@
 		
 		display_sidebar($ids, $sects);
 		display_footer();
+		?>
+
+		<!-- close body and html tags -->	
+		</body>
+		</html>
+
+		<?php
 	}
 	
 	//display a section of the about using the blog post setup

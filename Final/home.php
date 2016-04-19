@@ -61,6 +61,13 @@
 		//display the other sections of the document
 		display_sidebar();
 		display_footer();
+		?>
+
+		<!-- close body and html tags -->	
+		</body>
+		</html>
+
+		<?php
 	}
 	
 	//display a blog post
