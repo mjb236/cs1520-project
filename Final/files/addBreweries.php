@@ -12,7 +12,7 @@ if ($db->connect_error) {
 } 
 
 $sql = "INSERT INTO breweries (Name, Address1, City, State, ZIP, Phone, Established, Website)
-VALUES ('The Brew Gentlement Beer Company', '512 Braddock Avenue', 'Braddock', 'PA', '15104', '412-871-5075', '1984', 'http://www.brewgentlemen.com');";
+VALUES ('The Brew Gentlemen Beer Company', '512 Braddock Avenue', 'Braddock', 'PA', '15104', '412-871-5075', '2014', 'http://www.brewgentlemen.com');";
 $sql .= "INSERT INTO breweries (Name, Address1, City, State, ZIP, Phone, Established, Website)
 VALUES ('Bad Jimmy''s Brewing Company', '4358 B Leary Way NW', 'Seattle', 'WA', '98107', '206-789-1548', '2013', 'http://www.badjimmysbrewingco.com');";
 $sql .= "INSERT INTO breweries (Name, Address1, City, State, ZIP, Phone, Established, Website)

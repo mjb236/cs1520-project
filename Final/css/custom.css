@@ -17,6 +17,13 @@ form#splash_form {
 	border: 1px solid black;
 }
 
+#logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline;
+}
+
 label#splash_label {
 	position: absolute;
 	margin: 20px;

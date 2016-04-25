@@ -10,6 +10,7 @@
 		<body>
 
     <div class="blog-masthead">
+    	<img id="logo" src="img/bowen.jpg" alt="Bowen Brewing">
 			<div class="container">
 				<nav class="blog-nav">
 					<?php
