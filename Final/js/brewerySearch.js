@@ -1,3 +1,5 @@
+//Javascript to display a predictive search field for the brewerys in the database.
+
 $(document).ready(function() {
 	var breweryNames = [];
 	var breweryIDs = [];

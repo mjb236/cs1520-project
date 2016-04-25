@@ -1,3 +1,6 @@
+//JS function that will display a google map inset for the selected brewery
+//found tutorial on google's development site and adapted it to my needs.
+
 function initMap() {
 	//get the street address of the displayed brewery from the document
 	var streetAddy = $("#street-address").text() + " " + $("#city-address").text();
