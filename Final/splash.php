@@ -9,8 +9,8 @@
 	session_start();
 	
 	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Breweries & Beer" => "beer.php", "About" => "about.php",  
-							"Contact" => "contact.php"];
+	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries" => "beer.php", 
+								"About" => "about.php",	"Contact" => "contact.php"];
 	
 	if(isset($_POST["ofAge"])) {
 		$_SESSION["ofAge"] = TRUE;

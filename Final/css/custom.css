@@ -152,7 +152,7 @@ input.contact-button {
 	background-color: #283018;
 }
 
-.pred-search-submit {
+#pred-search-submit {
 	width: 100px;
 	position: absolute;
 	height: 35;
@@ -162,6 +162,7 @@ input.contact-button {
 	color: #f0eceb;
 	border: 0 none;
 	background: #aa863a;
+	margin-left: 10px;
 }
 
 .results {
@@ -234,6 +235,10 @@ input[disabled] {
 	background-color: #808080;
 }
 
-#home_brew_form {
+#home_brew_form, #blog_form {
 	margin-bottom: 100px;
+}
+
+.row {
+	height: 650px;
 }

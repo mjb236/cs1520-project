@@ -8,12 +8,12 @@
 	session_start();
 	
 	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries & Beer" => "beer.php", 
+	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries" => "beer.php", 
 								"About" => "about.php", "Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name
 	$_SESSION["initPage"] = "beer.php";
-	$active = "Breweries & Beer";
+	$active = "Breweries";
 
 	if(!isset($_SESSION["ofAge"])) {
 		//user has not verified age - redirect to the age verification
@@ -30,19 +30,19 @@
 		?>
 			<div class="container">
 				<div class="blog-header">
-					<h1 class="blog-title">Breweries and Beer</h1>
-					<p class="lead blog-description">Below you will find data on breweries that I have visited and beers from those breweries.</p>
+					<h1 class="blog-title">Breweries</h1>
+					<p class="lead blog-description">Below you will find data on breweries that I have visited or wish to visit.</p>
 				</div>
 				
 				<div class="row">
 					<div class="col-sm-9 blog-main">
 						<div class="blog-post">
 							<h2 class="blog-post-title" id="brewery-info">Breweries</h2>
-								<form	id="pred-search">
-									<input class="pred-search-input" type="search" placeholder="Search for a brewery.">
+								<form	id="pred-search" action="beer.php" method="GET">
+									<input class="pred-search-input" name="breweryName" type="search" placeholder="Search for a brewery.">
 										<ul class="results">
 										</ul>
-									<input class="pred-search-submit" type="submit" value="Search">
+									<input id="pred-search-submit" type="submit" value="Search">
 								</form>
 
 		<?php
@@ -75,7 +75,7 @@
 				$server = "localhost";
 				$user = "bowen";
 				$pw = "bowen1234";
-				$dbname = "testing";
+				$dbname = "project";
 				$db = new mysqli($server, $user, $pw, $dbname);
 				if($db->connect_error) {
 					die("Database connection error: " . $db->connect_error);
@@ -157,22 +157,13 @@
 				<div class="col-sm-2 col-sm-offset-1 blog-sidebar">
 					<div class="sidebar-module sidebar-module-inset">
 						<h4>About</h4>
-						<p>This page contains data on breweries that I have visited or wish to visit. Also, below the brewery information are selected beers produced by those breweries.</p>
-					</div>
-					<div class="sidebar-module">
-						<h4>Jump To</h4>
-						<ol class="list-unstyled">
-							<li><a href="#brewery-info">Breweries</a></li>
-							<li><a href="#">Top</a></li>
-						</ol>
+						<p>This page contains data on breweries that I have visited or wish to visit. The search will let you choose the brewery to view from the database.</p>
 					</div>
 					<div class="sidebar-module">
 						<h4>Resources</h4>
 						<ol class="list-unstyled">
 							<li><a href="http://www.beeradvocate.com/">Beer Advocate</a></li>
 							<li><a href="http://www.pittsburghcraftbeerweek.com/">PCBW</a></li>
-							<li><a href="http://www.homebrewtalk.com/">Home Brew Talk</a></li>
-							<li><a href="http://www.howtobrew.com/">How To Brew</a></li>
 						</ol>
 					</div>
 				</div> <!-- ends the sidebar -->

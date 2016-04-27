@@ -8,7 +8,7 @@
 	session_start();
 	
 	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries & Beer" => "beer.php", 
+	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries" => "beer.php", 
 								"About" => "about.php", "Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name
@@ -30,7 +30,7 @@
 		?>
 		<div class="container">
 			<div class="blog-header">
-				<h1 class="blog-title">Home Brewing</h1>
+				<h1 class="blog-title">Homebrewing</h1>
 				<p class="lead blog-description">A brief overview of the science of brewing beer.</p>
 			</div>
 			
@@ -69,11 +69,12 @@
 						<p>In this section you can learn about what is all involved with brewing you own beer.</p>
 					</div> <!-- ends sidebar module -->
 					<div class="sidebar-module">
-						<h4>Jump To</h4>
+						<h4>Resources</h4>
 						<ol class="list-unstyled">
-							<li><a href="#">Top</a></li>
+							<li><a href="http://www.homebrewtalk.com/">Home Brew Talk</a></li>
+							<li><a href="http://www.howtobrew.com/">How To Brew</a></li>
 						</ol>
-					</div> <!-- ends sidebar module -->
+					</div>
 					<div class="sidebar-module">
 						<h4>Other Places</h4>
 						<ol class="list-unstyled">

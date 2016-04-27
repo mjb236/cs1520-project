@@ -8,7 +8,7 @@
 	session_start();
 	
 	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries & Beer" => "beer.php", 
+	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries" => "beer.php", 
 								"About" => "about.php", "Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name

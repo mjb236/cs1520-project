@@ -8,7 +8,7 @@
 	session_start();
 	
 	//declare an array with the links for the nav bar
-	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries & Beer" => "beer.php", 
+	$navItems = ["Home" => "home.php", "Homebrewing" => "homebrew.php", "Breweries" => "beer.php", 
 								"About" => "about.php", "Contact" => "contact.php"];
 	
 	//keep track of the initial page visit and the active page name
@@ -36,25 +36,14 @@
 			
 			<div class="row">
 				<div class="col-sm-9 blog-main">
-		<?php
-		
-		//open the file containing information to posted in the about page.
-		$data = file("files/blog.txt");
-		$length = count($data);
-		$i = 0;
-		while($i < $length) {
-			$title = $data[$i];
-			$date = $data[$i + 1];
-			$author = $data[$i + 2];
-			$img = $data[$i + 3];
-			$imgAlt = $data[$i + 4];
-			$text = $data[$i + 5];
-			display_post($title, $date, $author, $img, $imgAlt, $text);
-			$i = $i + 6;
-		}
-				
-		//end the main blog section of the page.
-		?>
+					<div id="blog_section">
+					</div>
+					<form id="blog_form">
+						<div class="form-row">
+								<input class="contact-button" id="newBtn" type="submit" name="newer" value="Newer Post" disabled>
+								<input class="contact-button" id="oldBtn" type="submit" name="older" value="Older Post">
+						</div>				
+					</form>	
 				</div> <!-- ends blog-main section -->
 		<?php
 		
@@ -63,26 +52,11 @@
 		display_footer();
 		?>
 
+		<script src="js/displayPosts.js"></script>
 		<!-- close body and html tags -->	
 		</body>
 		</html>
 
-		<?php
-	}
-	
-	//display a blog post
-	function display_post($title, $date, $author, $img, $imgAlt, $text) {
-		?>
-		
-		<div class="blog-post">
-		<?php
-			echo "<h2 class=\"blog-post-title\">$title</h2>\n";
-			echo "<p class=\"blog-post-meta\">$date by <a href=\"about.php\">$author</a></p>\n";
-			echo "<img class=\"blog-img\" src=\"$img\" alt=\"$imgAlt\">\n";
-			echo "<p>$text</p>";
-		?>
-		</div> <!-- ends section -->
-		
 		<?php
 	}
 
@@ -93,12 +67,6 @@
 					<div class="sidebar-module sidebar-module-inset">
 						<h4>About</h4>
 						<p>Here you are able to read about some of the breweries I've visited, beers I've had, or even my attempts at brewing my own ales and lagers.</p>
-					</div> <!-- ends sidebar module -->
-					<div class="sidebar-module">
-						<h4>Jump To</h4>
-						<ol class="list-unstyled">
-							<li><a href="#">Top</a></li>
-						</ol>
 					</div> <!-- ends sidebar module -->
 					<div class="sidebar-module">
 						<h4>Other Places</h4>

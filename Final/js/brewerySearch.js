@@ -1,5 +1,4 @@
-//Javascript to display a predictive search field for the brewerys in the database.
-
+//Javascript to display a predictive search field for the breweries in the database.
 $(document).ready(function() {
 	var breweryNames = [];
 	var breweryIDs = [];
@@ -9,7 +8,7 @@ $(document).ready(function() {
 		for(i = 0; i < data.length; i++) {
 			breweryIDs[i] = data[i][0];
 			breweryNames[i] = data[i][1];
-		}		
+		}	
 
 		//listen for enter key and submit search if it is pressed
 		$("#pred-search").keypress(function(event) {
@@ -19,6 +18,7 @@ $(document).ready(function() {
 			}
 		});
 
+		//on keyup display possible matches
 		$(".pred-search-input").on("keyup", function() {
 			$(".results").empty();
 			var input = $(".pred-search-input").val();

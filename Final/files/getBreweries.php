@@ -3,7 +3,7 @@
 	$server = "localhost";
 	$user = "bowen";
 	$pw = "bowen1234";
-	$dbname = "testing";
+	$dbname = "project";
 	$db = new mysqli($server, $user, $pw, $dbname);
 	if($db->connect_error) {
 		die("Database connection error: " . $db->connect_error);
