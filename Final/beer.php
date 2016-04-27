@@ -163,7 +163,6 @@
 						<h4>Jump To</h4>
 						<ol class="list-unstyled">
 							<li><a href="#brewery-info">Breweries</a></li>
-							<li><a href="#beers-info">Beers</a></li>
 							<li><a href="#">Top</a></li>
 						</ol>
 					</div>

@@ -13,7 +13,7 @@
 	
 	//keep track of the initial page visit and the active page name
 	$_SESSION["initPage"] = "homebrewing.php";
-	$active = "Home Brewing";
+	$active = "Homebrewing";
 
 	if(!isset($_SESSION["ofAge"])) {
 		//user has not verified age - redirect to the age verification
@@ -40,7 +40,7 @@
 					</div>
 					<form id="home_brew_form">
 						<div class="form-row">
-								<input class="contact-button" id="prev" type="submit" name="previous" value="Previous Section">
+								<input class="contact-button" id="prev" type="submit" name="previous" value="Previous Section" disabled>
 								<input class="contact-button" id="next" type="submit" name="next" value="Next Section">
 						</div>				
 					</form>	
@@ -52,6 +52,7 @@
 		display_footer();
 		?>
 
+		<script src="js/homebrew.js"></script>
 		<!-- close body and html tags -->	
 		</body>
 		</html>

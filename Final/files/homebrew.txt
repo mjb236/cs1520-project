@@ -1,0 +1,32 @@
+[
+{
+	"heading": "Intro",
+	"image": "img/bottles.jpg",
+	"text": "Now I am by no means an expert on brewing beer, but I'd like to think that I have the basics down. It's not actually that difficult once you get the hang of it. Me being me, I went and read two whole books and bought a temperature controlled chest freezer before trying it out, but you don't need to go so hog wild to get started. You just need some basic starting gear, ingredients and some patience."
+},
+{
+	"heading": "Equipment",
+	"image": "img/equipment.jpg",
+	"text": "Pictured above is some of the equipment I use. There's a copper wort chiller, fermenting and bottling buckets, a six gallon carboy, thermometer, airlock, strainer, hydrometer and test jar, etc. Not all of this is actually necessary, they just help with the process.</p><p>At the bare minimum you will need a large pot in which to boil the wort, something to stir the wort with, a fermenting bucket with lid and airlock, and bottling equipment. That's pretty much it. I got a starter kit that came with all of that gear and more for around $100. All it lacked was the boiling pot."
+},
+{
+	"heading": "Ingredients",
+	"image": "img/grainbag.jpg",
+	"text": "All beers are more or less made up of the four main ingredients: water, malts, hops and yeast. In fact, since 1516, beers in Germany have adhered to the <i>Reinheisgebot</i>, the name for their beer purity laws. They state that the only ingredents that can be used in beer are water, malted barley and hops. Later, the laws were amended to include yeast. After all, they didn't know yeast existed at the time.</p><p>Of course nowadays, we can add any kind of ingredients in we choose, as long as we're careful. But all beers will start with those four ingredients. Pictured above is a muslin bag full of caramel grains I used for an Oktoberfest I have fermenting."
+},
+{
+	"heading": "The Boil",
+	"image": "img/wort.jpg",
+	"text": "Here we see the fermentable sugars in the boiling pot. The boil is the active part of beer making. You will bring your water to a boil, add the fermentable sugars and boil for a set amount of time. For homebrewing, the boil times are usually an hour, but longer boils don't actually hurt. They would just need more water added at the end to bring the wort up to your final targe volume.</p><p>Hops are added during the boil according to a <q>hop schedule</q>. The types of hops you are using will give the beer different characteristics depending on how long they are in the boil. The longer the hops are boiled, the more bitterness they give the beer."
+},
+{
+	"heading": "Yeast",
+	"image": "img/starters.jpg",
+	"text": "Yeast may be the most wonderous creatures known to man, and they are not to be overlooked in the process. While the majority of the beer's flavor will lie in malt and hop profile, the style of yeast will contribute its fair share of flavoring to the finished product as well. Basically the entire goal of making the wort was to give these little guys a place to thrive, eat, and make alcohol.</p><p>The yeast need to pitched into the wort after it has cooled down to room temperature or thereabouts. Anything that touches the wort once the boil is complete needs to be thoroughly sanitized, as bacteria will also thrive in wort, and that would be sad."
+},
+{
+	"heading": "Fermentation",
+	"image": "img/ferment.jpg",
+	"text": "After the yeast is pitched into the wort all you need to do is wait. It's more difficult than it sounds, but you just need to let the yeast do their job. Pictured above is my fermentation setup. I bought a chest freezer and wired up a temperature controller so that I could more precisely control fermentation conditions. Yeast will produce different flavors and byproducts at different temperatures. They will also work better at their optimal temperatures, so while not necessary, temperature control helps.</p><p>After a week or two, the yeast should have eaten up all the sugars they were able and will have started to settle to the bottom of the fermenting bucket or carboy. Congratulations, you now have beer. You just need to keg it, or bottle it and let it carbonate, before enjoying."
+}
+]

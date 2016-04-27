@@ -8,7 +8,7 @@
 	function display_footer() {
 		?>
 			<footer class="blog-footer">
-				<p>Page design and contents by Michael Bowen - CS1520 Project 1</p>
+				<p>Page design and contents by Michael Bowen - CS1520 Project 2</p>
 				<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 				<p>
 					<a href="#">Back to top</a>

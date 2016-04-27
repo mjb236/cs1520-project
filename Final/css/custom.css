@@ -112,6 +112,11 @@ input.contact-button {
 	margin-bottom: 10px;
 }
 
+.brew-img {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
 .blog-masthead {
 	background-color: #aa863a;
 }
@@ -154,6 +159,9 @@ input.contact-button {
 	right: 0;
 	top: 50px;
 	display: block;
+	color: #f0eceb;
+	border: 0 none;
+	background: #aa863a;
 }
 
 .results {
@@ -220,4 +228,12 @@ input.contact-button {
 	width: 500px;
 	height: 400px;
 	border: thin solid black;
+}
+
+input[disabled] {
+	background-color: #808080;
+}
+
+#home_brew_form {
+	margin-bottom: 100px;
 }
