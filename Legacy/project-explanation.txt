@@ -1,0 +1,126 @@
+Changes in Part 2:
+
+	The first thing I tried to do was fix the way the splash page verified the user's age. All page
+redirects using the header() function are now called before any HTML is sent to the browser. I 
+tested the functionality on Chrome and with XAMPP and it seems to be working.
+
+	For part two of the project my main focus was to change how the brewery data from the database
+was displayed on the brewery page of the site. Instead of displaying in a table, I cleaned up the
+output area to be a more intuitive display of the information. Along with this change, I added in
+a predictive search box that will display suggestions for breweries in the database. Clicking on 
+the suggested brewery will submit information to the page and display the brewery's information, 
+as long displaying a Google map inset showing where the brewery is located.
+
+	I had dabbled with connecting to the BreweryDB through their API. I was able to obtain a key
+from their site, but after looking through their documentation, the searches that they allowed
+for through the API did not quite mesh with what I wanted to do with this section of the page.
+I liked the idea of using the predictive search feature, but the API would only allow for
+searches by name and not for getting all brewery names at once. Looking back, it might have been
+possible to use localStorage to build a repository of valid names as they were searched for, but
+I kind of just thought of that and wouldn't have time to explore that option at the moment.
+	
+	I also added a fair number of breweries to the database so that the predictive search
+functionality could be tested properly. I also included a script in the misc folder of the 
+project that will set up the brewery table for you, Matt, should you wish to try testing out
+the functionality properly. You'll just need to update the database information according
+to your credentials.
+
+	To simplify matters, I removed the beer section on this page. It would be nice to add it back
+in if I ever wanted to publish this site, but I felt that for the final submission, the main goal
+was just to demonstrate the predictive search and Google map capabilities of the site, and the 
+beer section was just superfluous.
+
+	Once that section was done, I worked on adding the homebrewing page to the site. Here I 
+fiddled around with how to display the post in a nice manner, wanting to use JS to change data
+without refreshing the page. I tried to store some of the information in an XML document, but
+was having trouble when trying to use AJAX to load it, so I settled on storing the information
+in a text filed formatted in JSON. Once I had the file setup, it wasn't too difficult to use
+AJAX to get the JSON and display the sections accordingly.
+
+	To display the various sections of the homebrewing page, I included buttons at the bottom
+of the section that would allow the user to scroll through the available postings. The buttons
+update themselves based on whether or not there are previous or next sections available.
+
+	After getting that section completed, I used the same philosphy to change how the blog posts
+were displayed on the home page. I moved the blog post text over to a JSON formatted text file
+and included buttons for the user to scroll through the posts. 
+
+	The About and Contact pages are largely unchanged. I also unlocked the sidebar and removed 
+some of the "Jump To" functionality as it just didn't seem to help with anything. Still not
+quite happy with it, but I think it flows a little better than having it stuck at that spot
+on the page.
+
+If There Was Part 3:
+
+	More time would allow me to actually flesh out the different sections of the site. I had to
+dedicate most of my time the actual site development to spend much time on the content of the
+site. I feel like I included a good bit, but it does seem a bit lacking. The courseload this
+semester kept me from really even being able to go out for making new blog posts anyway. Been
+real busy, as I'm sure you relate to.
+	
+	With more time I would certainly like to further explore the BreweryDB functionality, as 
+maintaining the database myself is somewhat of a hassle. Perhaps being able to build up a 
+store of recent searches that could be used in the predictive search as I stated above.
+
+	If that kind of thing didn't work, I would add the beer section back into the site and 
+fill it out with relevent data. Then when a brewery was searched for it could display info
+on some of the beers from that brewery below the map section. This would take a good amount
+of time if not using an already established database. There would just be an enormous amount
+of data entry involved. That's part of why I just scrubbed the entire beer section for the
+second part of the project.
+
+	I'm not actually sure if the Bootstrap theme I used from the beginning is the best way
+have set the site up. Exploring the various themes or looking at using another front-end
+toolkit would be worth looking into. I got the site set up fairly well, being not so great
+at the CSS stuff, but I feel like I learned a lot in tinkering with this project. 
+
+	Finding more fun and useful ways to incorporate JS/JQuery would be nice too. I feel like
+the changes I made to the page were meaningful and involved, but I also feel as if I've
+only scratched the surface on what's possible. Seems like I could spend ten straight years
+doing nothing but web programming and still be in the dark.
+
+Learning from Part 1 and Part 2:
+
+	First and foremost I learned that dealing with asynchronous data requests required me to
+adjust my programming brain. I did a lot of wondering "why is the variable null?" when
+trying to access it ouside of an AJAX request. I'm so used to the procedural style of
+programming that that took a while to learn how to deal with.
+
+	I also learned that JSON is pretty neat and makes laying out data easy and readable. My
+first thought was to try using XML, which seemed pretty intuitive due to the tags, but
+in reality cycling through the XML data is pretty nuanced. The JSON data layout and
+included functions made it pretty simple to just get an array of data and use the piece of
+each object that you need.
+
+	Perhaps most importantly I learned that you can study this stuff all you want, but it
+doesn't actually help all that much until you get down and try to code. I hope that I have
+some time in the future to actually play around with this web programming thing outside of
+an academic sense. Working full time and taking these classes kind of handcuffs me in the
+amount of time I can spend on things without going insane.
+
+Likes/Suggestions:
+
+	I did enjoy basically building a scratch (not counting the Bootstrap template). Learning the
+different languages and what they can be used to do was very interesting. The fact that I had
+to do a ton of web research in looking up how to get certain things to work led to a good bit
+of learning. It was also nice to be able to focus upon a subject of my choosing. That helped 
+to keep interest a bit.
+	
+	Figuring out how to connect to databases and APIs was a nice step forward, even if the other
+API I wanted to use turned out to be not super condusive to my needs. But now I know how to 
+put Google maps on a page, and how to use JS to display different content without the page
+refreshing. I even learned a way to scroll to a place on the page in a nice way. The project
+really helped me see some of what is possible with theses languages.
+
+	As for what I might have liked better, I would probably lean toward a more definitive set of
+requirements. That may be more of a problem with myself, however. I typically find that I'm a 
+good coder, but coming up with design is not my strong suit. It's like I'm missing the 
+imaginitive part of my brain. But having a few solid implmentation goals would have helped me
+with that a bit I think. The first part, for example, needed to have a Contact page with data
+base functionality, and I feel like that page for me actually turned out to be the best of
+the pages from the first section. It might have something to do with the fact that it is
+basically just a form and styling that with CSS isn't too difficult, but some of it might 
+have been because of the concrete specifications.
+
+	Overall though, I feel that this project was a very good way to learn the concepts of the class,
+my personal pitfalls aside.
